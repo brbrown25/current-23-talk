@@ -1,0 +1,26 @@
+rootdir: protobuf
+sources: # all sources will be passed together
+  - com/bbrownsound/proto
+output: gen # gen is the default output directory (should be gitignored)
+plugins:
+- name: python
+  output: python-protobuf-models/src/bbrownsound
+- name: cpp
+  output: cpp-protobuf-models/src
+- name: go
+  args: paths=source_relative
+  output: golang-protobuf-models
+- name: js
+  output: gen/js
+- name: java
+  output: scala-protobuf-models/src/main/java
+- name: scala
+  args: flat_package,java_conversions
+  output: scala-protobuf-models/src/main/scala
+descriptors:
+  output: gen/descriptors.pb # defaults to descriptors.pb in root output directory
+  enabled: true # defaults to true, descriptors are useful
+  include_imports: true
+  include_source_info: true
+debug: true # debug will output command line information
+dry_run: false # if true, don't execute the protoc command. useful with debug.
