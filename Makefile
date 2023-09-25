@@ -14,7 +14,7 @@ lint:
 	docker run --rm --entrypoint="" -v `pwd`:/workspace grpckit/buf:1.54.0_1 /bin/bash -c 'cd protobuf && buf lint --config ../buf.yaml'
 
 compatibility-check:
-	rm -rf production_ver && git clone --branch production ssh://git@github.com/brbrown28/current-23-talk.git production_ver
+	rm -rf production_ver && git clone --branch production https://github.com/brbrown25/current-23-talk.git production_ver
 	docker run --rm --entrypoint="" -v `pwd`:/workspace grpckit/buf:1.54.0_1 /bin/bash -c 'cd protobuf && buf breaking --against "../production_ver/protobuf" --config "../buf.yaml"'
 
 publish-local-snapshot:
