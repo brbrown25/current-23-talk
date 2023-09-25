@@ -10,8 +10,10 @@ plugins:
 - name: go
   args: paths=source_relative
   output: golang-protobuf-models
-- name: js
-  output: gen/js
+# - name: js
+#   output: js-protobuf-models/src
+- name: ts
+  output: ts-protobuf-models/src
 - name: java
   output: scala-protobuf-models/src/main/java
 - name: scala

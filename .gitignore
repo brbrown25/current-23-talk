@@ -1,0 +1,65 @@
+gen/
+# https://alvinalexander.com/source-code/scala/sample-gitignore-file-scala-sbt-intellij-eclipse/
+# bloop and metals
+.bloop
+.bsp
+
+# metals
+project/metals.sbt
+.metals
+.bash_history
+# vs code
+.vscode
+
+# scala 3
+.tasty
+
+# sbt
+project/project/
+project/target/
+target/
+
+# eclipse
+build/
+.classpath
+.project
+.settings
+.worksheet
+bin/
+.cache
+
+# intellij idea
+*.log
+*.iml
+*.ipr
+*.iws
+.idea
+
+# mac
+.DS_Store
+
+# other?
+.history
+.scala_dependencies
+.cache-main
+
+#general
+*.class
+
+credentials.sbt
+**/credentials.sbt
+
+/production_ver/
+
+# ignore the generated code
+scala-protobuf-models/src
+python-protobuf-models/src
+python-protobuf-models/dist
+golang-protobuf-models/*
+golang-protobuf-models/!go.mod
+golang-protobuf-models/!.gitignore
+golang-protobuf-models/!.jfrog
+golang-protobuf-models/!.jfrog/*
+cpp-protobuf-models/build/
+cpp-protobuf-models/src/
+cpp-protobuf-models/protobuf-models
