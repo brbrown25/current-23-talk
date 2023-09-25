@@ -1,0 +1,10 @@
+# Cats jvmopts see https://weblogs.java.net/blog/kcpeppe/archive/2013/12/11/case-study-jvm-hotspot-flags
+-Dfile.encoding=UTF8
+-Xms512m
+-Xmx4096m
+-Xss2m
+-XX:ReservedCodeCacheSize=250M
+-XX:+TieredCompilation
+# effectively adds GC to Perm space
+-XX:-UseGCOverheadLimit
+-Dquill.macro.log=false
