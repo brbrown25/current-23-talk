@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package com.bbrownsound.proto;
+option go_package = "jfrog.io/bbrownsound/bbrownsound-schemas/golang-protobuf-models/com/bbrownsound/proto";
+
+message ScanEvent {
+  string event_id = 1; //UUID of the event
+  string scan_target = 2;
+  string scan_type = 3;
+  string device_type = 4;
+  map<string, string> metadata = 5;
+  string created_at = 6; //an ISO-8601 string with timezone
+  string updated_at = 7; //an ISO-8601 string with timezone
+}
