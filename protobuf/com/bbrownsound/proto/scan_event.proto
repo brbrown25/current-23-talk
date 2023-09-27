@@ -11,4 +11,11 @@ message ScanEvent {
   map<string, string> metadata = 5;
   string created_at = 6; //an ISO-8601 string with timezone
   string updated_at = 7; //an ISO-8601 string with timezone
+  Source source = 8;
+}
+
+enum Source {
+  MISSING_SOURCE = 0;
+  WEB_SCAN = 1;
+  VENDOR = 2;
 }
